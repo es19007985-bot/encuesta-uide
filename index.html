@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta UIDE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #001F3F; /* Azul marino UIDE */
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #001F3F, #FFD700);
+      color: #fff;
+      padding: 20px;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+    main {
+      background-color: #ffffff;
+      color: #000;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    h1 {
+      color: #800020; /* Vino UIDE */
+    }
+    h2 {
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+    h3 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #800020; /* Vino UIDE */
+    }
+    p {
+      margin-bottom: 15px;
+      font-style: italic;
+      font-size: 18px;
+    }
+    form {
+      margin-top: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+    .carrera {
+      margin: 5px 0;
+      color: #000; /* Respuestas en negro */
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #001F3F;
+      color: #FFD700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #FFD700;
+      color: #001F3F;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <img src="logo_uide.png" alt="Logo UIDE">
+    <h1>Encuesta sobre Estudios en la Universidad Internacional del Ecuador</h1>
+  </header>
+
+  <main>
+    <h2>¡Hola! Gracias por tomarte unos minutos para participar en esta encuesta.</h2>
+    <p>
+      El objetivo de esta investigación es conocer los intereses de los estudiantes que desean estudiar en la Universidad Internacional del Ecuador. 
+      Tus respuestas nos ayudarán a mejorar la información sobre las carreras y ofrecer programas que se ajusten a tus necesidades.
+    </p>
+    <p>
+      La encuesta es totalmente anónima y no tomará más de 1 minuto. ¡Tu opinión es muy importante!
+    </p>
+
+    <form action="/submit" method="POST">
+      <h3>1. ¿Qué carrera deseas estudiar?</h3>
+      <div class="carrera"><input type="radio" name="carrera" value="Negocios Internacionales"> Negocios Internacionales</div>
+      <div class="carrera"><input type="radio" name="carrera" value="Marketing"> Marketing</div>
+      <div class="carrera"><input type="radio" name="carrera" value="Arquitectura"> Arquitectura</div>
+      <div class="carrera"><input type="radio" name="carrera" value="Medicina"> Medicina</div>
+      <div class="carrera"><input type="radio" name="carrera" value="Psicología"> Psicología</div>
+      <div class="carrera"><input type="radio" name="carrera" value="Ingeniería en TIC"> Ingeniería en Tecnologías de la Información y la Comunicación</div>
+
+      <h3>2. ¿Qué modalidad de estudio te interesa?</h3>
+      <div class="carrera"><input type="radio" name="modalidad" value="Presencial"> Presencial</div>
+      <div class="carrera"><input type="radio" name="modalidad" value="Semipresencial"> Semipresencial</div>
+      <div class="carrera"><input type="radio" name="modalidad" value="Virtual"> Virtual</div>
+
+      <h3>3. ¿Cuál es tu motivación principal?</h3>
+      <div class="carrera"><input type="radio" name="motivacion" value="Calidad académica"> Calidad académica</div>
+      <div class="carrera"><input type="radio" name="motivacion" value="Prestigio"> Prestigio de la universidad</div>
+      <div class="carrera"><input type="radio" name="motivacion" value="Ubicación"> Ubicación</div>
+      <div class="carrera"><input type="radio" name="motivacion" value="Costos"> Costos</div>
+
+      <h3>4. ¿Qué áreas de interés te gustaría desarrollar?</h3>
+      <div class="carrera"><input type="radio" name="area" value="Negocios y Economía"> Negocios y Economía</div>
+      <div class="carrera"><input type="radio" name="area" value="Tecnología"> Tecnología</div>
+      <div class="carrera"><input type="radio" name="area" value="Ciencias de la Salud"> Ciencias de la Salud</div>
+      <div class="carrera"><input type="radio" name="area" value="Arte y Diseño"> Arte y Diseño</div>
+
+      <button type="submit">Enviar Respuesta</button>
+    </form>
+  </main>
+</body>
+</html>
